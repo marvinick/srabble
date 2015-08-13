@@ -16,6 +16,6 @@
             $result = $test_ScrabbleCounter->countScrabble($input);
 
             //Assert
-            $this->assertEquals(array(5), $result);
+            $this->assertEquals(5, $result);
         }
     }
