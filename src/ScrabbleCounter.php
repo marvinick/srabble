@@ -43,3 +43,10 @@ function array_intersect_fixed($array1, $array2) {
     }
     return $result;
 }
+
+<?php
+
+if (array_key_exists($key, $array))
+    $array[$key]['occurances']++;
+else
+    $array[$key] = array('value'=>$value, 'occurances'=>1);
