@@ -10,12 +10,26 @@
 
             //Arrange
             $test_ScrabbleCounter = new ScrabbleCounter;
-            $input = "dog";
+            $word = "dog";
 
             //Act
-            $result = $test_ScrabbleCounter->countScrabble($input);
+            $result = $test_ScrabbleCounter->countScrabble($word);
 
             //Assert
             $this->assertEquals(5, $result);
+        }
+
+        function test_noScrabble()
+        {
+            //Arrange
+            $test_ScrabbleCounter = new ScrabbleCounter;
+            $word = null;
+
+            //Act
+            $result = $test_ScrabbleCounter->countScrabble($word);
+
+            //Assert
+            $this->assertEquals("Why you gotta do me like that?!", $result);
+
         }
     }
