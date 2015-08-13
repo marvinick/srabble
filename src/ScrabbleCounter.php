@@ -24,10 +24,22 @@
             // matching the keys from $word_to_letters with $flipped and return the value from $letter_value
             $matched_letters = array_intersect_key($letters_value, $flipped);
 
-            //sum the values
+            // sum the values
             $total_count = array_sum($matched_letters);
 
         return $total_count;
         }
     }
 ?>
+
+
+function array_intersect_fixed($array1, $array2) {
+    $result = array();
+    foreach ($array1 as $val) {
+      if (($key = array_search($val, $array2, TRUE))!==false) {
+         $result[] = $val;
+         unset($array2[$key]);
+      }
+    }
+    return $result;
+}

@@ -10,7 +10,7 @@
 
             //Arrange
             $test_ScrabbleCounter = new ScrabbleCounter;
-            $word = "dog";
+            $word = "pie";
 
             //Act
             $result = $test_ScrabbleCounter->countScrabble($word);
